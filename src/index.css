@@ -1,0 +1,239 @@
+@import 'tailwindcss';
+
+@font-face {
+  font-family: 'Unbounded';
+  src: local('Unbounded-Regular'),
+    url('./assets/fonts/Unbounded-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Unbounded';
+  src: local('Unbounded-Medium'),
+    url('./assets/fonts/Unbounded-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Unbounded';
+  src: local('Unbounded-SemiBold'),
+    url('./assets/fonts/Unbounded-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NunitoSans';
+  src: local('NunitoSans-ExtraLight'),
+    url('./assets/fonts/NunitoSans-ExtraLight.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NunitoSans';
+  src: local('NunitoSans-Light'),
+    url('./assets/fonts/NunitoSans-Light.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NunitoSans';
+  src: local('NunitoSans-Regular'),
+    url('./assets/fonts/NunitoSans-Regular.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NunitoSans';
+  src: local('NunitoSans-SemiBold'),
+    url('./assets/fonts/NunitoSans-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NunitoSans';
+  src: local('NunitoSans-Bold'),
+    url('./assets/fonts/NunitoSans-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NunitoSans';
+  src: local('NunitoSans-ExtraBold'),
+    url('./assets/fonts/NunitoSans-ExtraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-primary: 'Nunito Sans', sans-serif;
+  --font-second: 'Unbounded', sans-serif;
+  --font-third: 'Inter', sans-serif;
+  --font-fourth: 'Sofia Sans', sans-serif;
+  --font-fifth: 'Manrope', sans-serif;
+
+  /* Custom screen sizes */
+  --breakpoint-xs: 568px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-1xl: 1440px;
+  --breakpoint-3xl: 1920px;
+  --breakpoint-4xl: 2560px;
+
+  /* Custom colors */
+  --color-black: #000000;
+  --color-cod-black: #080808;
+  --color-cod-gray: #0d0d0d;
+  --color-cod-dark: #100f0f;
+  --color-woodsmoke-dark: #151515;
+  --color-woodsmoke-dust: #141414;
+  --color-woodsmoke-black: #1a1a1a;
+  --color-woodsmoke-light: #1c1c1c;
+  --color-woodsmoke-bright: #1d1d1d;
+  --color-woodsmoke-dimmed: #191919;
+  --color-mine-shaft: #303030;
+  --color-tuatara: #393939;
+  --color-masala-light: #404040;
+  --color-masala-gray: #454545;
+  --color-fuscous-gray: #4f4f4f;
+  --color-chicago-gray: #5d5d5d;
+  --color-storm-dust: #626262;
+  --color-boulder-dark: #777;
+  --color-boulder-gray: #767676;
+  --color-boulder-dust: #757575;
+  --color-boulder-light: #7b7b7b;
+  --color-star-dust: #9b9b9b;
+  --color-silver: #bdbdbd;
+  --color-silver-chalice: #a8a8a8;
+  --color-star-dust-400: #a0a0a0;
+  --color-white: #ffffff;
+  --color-dust-white: #f3f3f3;
+  --color-gallery-white: #ececec;
+  --color-mercury-white: #e6e6e6;
+  --color-alto-white: #dadada;
+  --color-tangerine: #f08d34;
+  --color-chilean-fire: #f1770a;
+  --color-persian-red: #d12d2d;
+  --color-gray: #7f7f7f;
+  --color-form: rgba(230, 230, 230, 0.5);
+  --color-mountain-mist: #8d8d8d;
+}
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    @apply transition-[width,height,transform] duration-300 ease-in-out;
+  }
+
+  html {
+    @apply font-sans;
+    scrollbar-gutter: stable;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-primary text-mercury-white bg-cod-black text-base leading-[1.37] h-full;
+    scrollbar-gutter: stable;
+  }
+
+  h1 {
+    font-size: clamp(24px, 10.1325px + 3.7vw, 44px);
+  }
+
+  @media (min-width: 1440px) {
+    h1 {
+      font-size: clamp(44px, -20.3px + 4.46vw, 94px);
+    }
+  }
+  h2 {
+    font-size: clamp(22px, 10.5625px + 3.05vw, 34px);
+  }
+
+  @media (min-width: 1440px) {
+    h2 {
+      font-size: clamp(34px, 18px + 1.5vw, 62px);
+    }
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+@layer base {
+  h1 {
+    font-size: clamp(24px, 10.1325px + 3.7vw, 44px);
+  }
+
+  @media (min-width: 1440px) {
+    h1 {
+      font-size: clamp(44px, -20.3px + 4.46vw, 94px);
+    }
+  }
+}
+
+@layer base {
+  h2 {
+    font-size: clamp(22px, 10.5625px + 3.05vw, 34px);
+  }
+
+  @media (min-width: 1440px) {
+    h2 {
+      font-size: clamp(34px, 18px + 1.5vw, 62px);
+    }
+  }
+}
+
+@layer components {
+  .section {
+    @apply mx-auto max-w-[375px] xs:max-w-[568px] lg:max-w-[1024px] 1xl:max-w-[1440px] 3xl:max-w-[1920px] 4xl:max-w-[2560px] px-3 xs:px-6 lg:px-10 1xl:px-10 3xl:px-22.5 4xl:px-40;
+  }
+}
+
+input.form-book:-webkit-autofill,
+input.form-book:-webkit-autofill:focus,
+input.form-book:-webkit-autofill:hover {
+  box-shadow: 0 0 0 1000px var(--color-woodsmoke-black) inset !important;
+  -webkit-text-fill-color: var(--color-mercury-white) !important;
+  outline: none !important;
+  background-image: none !important;
+  background-color: transparent !important;
+  transition: background-color 9999s ease-in-out 0s !important;
+}
+
+input.form-write-us:-webkit-autofill,
+input.form-write-us:-webkit-autofill:focus,
+input.form-write-us:-webkit-autofill:hover {
+  box-shadow: 0 0 0 1000px var(--color-cod-dark) inset !important;
+  -webkit-text-fill-color: var(--color-mercury-white) !important;
+  outline: none !important;
+  background-image: none !important;
+  background-color: transparent !important;
+  transition: background-color 9999s ease-in-out 0s !important;
+}
+
+.swiper-slide-prev,
+.swiper-slide-next {
+  transform: scale(0.8);
+  opacity: 0.5;
+}
+.swiper-slide-active {
+  transform: scale(1);
+  opacity: 1;
+}
