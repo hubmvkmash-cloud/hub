@@ -30,10 +30,7 @@ function App() {
 
   return (
     <>
-      <Header
-        isPrivacy={showPolicy}
-        onShowHome={closePolicy}
-      />
+      <Header isPrivacy={showPolicy} onShowHome={closePolicy} />
 
       {showPolicy ? (
         <PrivacyPolicy />
