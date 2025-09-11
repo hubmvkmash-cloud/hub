@@ -27,7 +27,7 @@ $data = [
 $data_string = json_encode($data);
 
 // API ключ KeyCRM
-$token = getenv('VITE_API_KEY');
+$token = 'cdb4b8e800f34ca18358b15fdb33f52b';
 
 // відправляємо на сервер
 $ch = curl_init();
